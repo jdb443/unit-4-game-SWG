@@ -1,2 +1,2 @@
-# unit-4-game-SW
+# unit-4-game-SWG
 Star Wars Game
