@@ -14,9 +14,44 @@
     <title>Jonathan Behar - Star Wars RPG</title>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+	<div class="container">
+		<div class="row">
+			<header>
+				<h1>Star Wars RPG!</h1>
+			</header>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">		
+				<!-- character starting area -->
+				<div id="cast"></div>
 
-    
+				<!-- player area -->
+				<h2 class="display">Your Character</h2>
+				<div id="selectCharacter"></div>
+
+				<!-- defender area -->
+				<h2 class="display">Defender</h2>
+				<div id="defender"></div>
+			</div>
+
+			<div class="col-md-6">
+				<!-- available opponents -->
+				<h2 class="display">Enemies Available To Attack</h2>
+				<div id="availableVillians"></div>
+
+				<!-- fight section -->
+				<h2 class="display">Fight Section</h2>
+				<!-- attack button -->
+				<button type="button" class="btn btn-danger raised display" id="attack">Attack</button>
+
+				<!-- game text -->
+				<p id="textDisplayed"></p>
+			</div>
+		</div>
+	</div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -25,6 +60,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     <!-- JavaScript Game -->
-    <script type="text/javascript" src="javascript/game.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
