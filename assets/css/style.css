@@ -272,6 +272,25 @@ h3.threeD {
 		;
 }
 
+.threeDV {
+	text-align: center;
+	margin: 0;
+	color: black;
+	text-shadow:
+		-1px 1px 0 #ddd,
+		-2px 2px 0 #c8c8c8,
+		-3px 3px 0 #ccc,
+		-4px 4px 0 #b8b8b8,
+		-4px 4px 0 #bbb,
+		0px 1px 1px rgba(0,0,0,.4),
+		0px 2px 2px rgba(0,0,0,.3),
+		-1px 3px 3px rgba(0,0,0,.2),
+		-1px 5px 5px rgba(0,0,0,.1),
+		-2px 8px 8px rgba(0,0,0,.1),
+		-2px 13px 13px rgba(0,0,0,.1)
+		;
+}
+
 .starfontR {
   font-family: 'star_jediregular';
   font-size: 1vw;
@@ -304,16 +323,20 @@ h3.threeD {
   }
   
   #start-screen p {
-    font-size: 2.6vh;
+    font-size: 2vh;
     font-weight: bold;
+    font-family: 'star_jediregular';
   }
   
   #opponents p {
     font-size:1.5vh;
+    font-family: 'star_jediregular';
   }
   
   #opponents {
     height: 34vh;
+    font-family: 'star_jediregular';
+
   }
   
   #start-screen img {
@@ -332,23 +355,28 @@ h3.threeD {
   
   #fight-stage {
     background-image: url("../images/star-wars-iceland.jpg");
-    background-size: 800px;
+    background-size: 100%;
     background-repeat: no-repeat;
     box-shadow: 10px 10px 5px #888888;
+    width: 100vw;
   }
   
   #myChar img, #oppChar img{
-    width:200px;
+    width: 200px;
+    height: 400px;
 
   }
   
   #myHealth, #opponentHealth{
+    font-family: 'star_jediregular';
     font-size: 16px;
     font-weight: bold; 
     color:black;
     position: absolute;
   }
   
+
+
   #oppChar {
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);

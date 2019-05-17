@@ -15,50 +15,51 @@
 
     <title>Jonathan Behar - Star Wars RPG</title>
 </head>
-<body id="background">
-	<button id="restart" class="btn btn-default btn-sm threeD">Restart</button>
-	<button id="volumeButton" class="fas fa-volume-off"></button>
-	<div id="start-screen">
-	  <h1 class="threeD"> Star Wars RPG </h1>
-	  <h3 class="threeD"> Choose your character </h3>
-	   <div class="container">
-		<div id="character-row" class="row">
+<body id = "background">
+	<button id = "restart" class = "btn btn-default btn-sm threeD">Restart</button>
+	<button id="volumeButton" class = "fas fa-volume-off threeDV"></button>
+	<div id = "start-screen">
+	  <h1 class = "threeD"> Star Wars RPG </h1>
+	  <h3 class = "threeD"> Choose your character </h3>
+	   <div class = "container">
+		<div id = "character-row" class = "row">
 		</div>
 	  </div>
 	</div>
-	<div id="game screen">
-	  <div class="container">
+	<div id = "game screen">
+	  <div class = "container">
+			<div><h1 class = "threeD">Star Wars RPG</h1></div>
 		<div class = "row">
-		  <div class = "col-xs-3 col-xs-offset-1"></div>
+		  <div class = "col-xs-3"></div>
 		  <div id = "opponents" class = "col-xs-8 row"></div>
 		</div>
-		<div class = "row">
+		<div class = "img-responsive max-width: 100%">
 
-		  <div id = "fight-stage" class = "col-xs-10">
+		  <div id = "fight-stage" class = "col-xs-10 img-fluid max-width: 100%">
 			<div class = "row">
-			  <div class = "col-xs-5">
-				<div class="progress">
-				  <span id="myHealth"></span>
-				  <div id="myHP" class="progress-bar bg-success progress-bar-striped active" role="progressbar" style="width:200px">
+			  <div class = "col-xs-5 ml-3">
+				<div class = "progress">
+				  <span id = "myHealth"></span>
+				  <div id = "myHP" class = "progress-bar bg-success progress-bar-striped active" role = "progressbar" style = "width:200px">
 				  </div>
 				</div>
 			  </div>
-			  <div class = "col-xs-5 col-xs-offset-2">
-				<div class="progress">
-				  <span id="opponentHealth"></span>
-				  <div id="opponentHP" class="progress-bar bg-danger progress-bar-striped justify-content-end active" role="progressbar" style="width:200px">
+			  <div class = "col-xs-5 ml-auto mr-3">
+				<div class = "progress ml-auto justify-content-end">
+				  <span id = "opponentHealth" class="ml-auto justify-content-end"></span>
+				  <div id = "opponentHP" class = "progress-bar bg-danger progress-bar-striped d-flex ml-auto active" role = "progressbar" style = "width:200px">
 				  </div>
 				</div>
 			  </div>
 			</div>
 			<div id = "fight-area" class = "row">
-			  <div id="myChar" class = "col-xs-4 col-xs-offset-1"></div>
-			  <div id="oppChar" class = "col-xs-4 col-xs-offset-2"></div>
+			  <div id = "myChar" class = "col-xs-4 col-xs-offset-1 m-5"></div>
+			  <div id = "oppChar" class = "col-xs-4 ml-auto col-xs-offset-2 mr-5"></div>
 			</div>
 		  </div>
 		</div>
 		<div class = "col-xs-2">
-				<button id="action" class="d-flex justify-content-center btn btn-warning btn-sm starfont threeD">Attack</button>
+				<button id = "action" class = "d-flex justify-content-center btn btn-warning btn-sm starfont threeD">Attack</button>
 		  </div>
 		<div class = "row">
 		  <div class = "col-xs-6 col-xs-offset-3">
@@ -70,11 +71,10 @@
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
 	<!-- JavaScript Game -->
 	<script type="text/javascript" src="assets/javascript/game.js"></script>

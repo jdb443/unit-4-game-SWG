@@ -29,12 +29,12 @@ $(document).ready(function() {
   
     $("#volumeButton").on("click", function() {
       if (allAudio.volume) {
-        $("#volumeButton").attr("class", "fas fa-volume-off");
+        $("#volumeButton").attr("class", "fas fa-volume-off threeDV");
         allAudio.hit.muted = true;
         allAudio.music.muted = true;
       }
       else {
-        $("#volumeButton").attr("class","fas fa-volume-up");
+        $("#volumeButton").attr("class","fas fa-volume-up threeDV");
         allAudio.hit.muted = false;
         allAudio.music.muted = false;
       }
@@ -95,7 +95,7 @@ $(document).ready(function() {
       starWarsRPG.remainingOpponents.splice(i,1);
       addChars("choose-opponent", $("#opponents"));
       displayImage($("#myChar"), character[starWarsRPG.currentPlayer].jpeg);
-      $("#myHP").css("width","200px");
+      $("#myHP").css("width","250px");
       $("#myHealth").html("<span>" + character[starWarsRPG.currentPlayer].hp + " HP</span>");
       starWarsRPG.currentPlayerHealth = character[starWarsRPG.currentPlayer].hp;
       starWarsRPG.currentAP = character[starWarsRPG.currentPlayer].ap;
@@ -115,7 +115,7 @@ $(document).ready(function() {
         starWarsRPG.remainingOpponents.splice(i,1);
         addChars("choose-opponent", $("#opponents"));
         displayImage($("#oppChar"), character[starWarsRPG.currentOpponent].jpeg);
-        $("#opponentHP").css("width","200px");
+        $("#opponentHP").css("width","250px");
         $("#opponentHealth").html("<span>" + character[starWarsRPG.currentOpponent].hp + " HP</span>");
         starWarsRPG.currentOpponentHealth = character[starWarsRPG.currentOpponent].hp;
         $("#action").html("Attack - Power:" + starWarsRPG.currentAP);
