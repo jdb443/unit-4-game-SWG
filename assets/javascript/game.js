@@ -109,12 +109,12 @@ $(document).ready(function() {
         starWarsRPG.opponentDead = false;
         $("#result").html("");
         starWarsRPG.currentOpponent = parseInt($(this).attr("value"));
-        $("#oppsChars").html("");
+        $("#oppChar").html("");
         $("#start-screen").css("visibility", "hidden");
         var i = starWarsRPG.remainingOpponents.indexOf(parseInt(starWarsRPG.currentOpponent));
         starWarsRPG.remainingOpponents.splice(i,1);
         addChars("choose-opponent", $("#opponents"));
-        displayImage($("#oppsChars"), character[starWarsRPG.currentOpponent].jpeg);
+        displayImage($("#oppChar"), character[starWarsRPG.currentOpponent].jpeg);
         $("#opponentHP").css("width","200px");
         $("#opponentHealth").html("<span>" + character[starWarsRPG.currentOpponent].hp + " HP</span>");
         starWarsRPG.currentOpponentHealth = character[starWarsRPG.currentOpponent].hp;
@@ -139,7 +139,7 @@ $(document).ready(function() {
           $("#opponentHP").css("width", "0px");
           $("#opponentHealth").html("<span>0 HP</span>");
           if (starWarsRPG.remainingOpponents.length === 0) {
-            $("#oppsChars").html("");
+            $("#oppChar").html("");
             $("#result").html("You have won all the battles!");
             setTimeout(function() {
               if(confirm("You win! Would you like to start a new game?")) {
@@ -151,13 +151,13 @@ $(document).ready(function() {
               starWarsRPG.currentAP+=character[starWarsRPG.currentPlayer].ap;
             }
             starWarsRPG.opponentDead = true;
-            $("#oppsChars").html("");
+            $("#oppChar").html("");
             $("#result").html("You win, select new opponent");
           }
         }
         else {
-          $("#oppChars").animate({right:'20%'},100);
-          $("#oppChars").animate({right:'0%'},100);
+          $("#oppChar").animate({right:'20%'},100);
+          $("#oppChar").animate({right:'0%'},100);
           starWarsRPG.currentPlayerHealth -= character[starWarsRPG.currentOpponent].counter;
           starWarsRPG.currentAP+=character[starWarsRPG.currentPlayer].ap;
           newPercent = starWarsRPG.currentPlayerHealth / character[starWarsRPG.currentPlayer].hp * 100;
@@ -189,7 +189,7 @@ $(document).ready(function() {
       starWarsRPG.currentAP = 1;
       starWarsRPG.opponentDead = false;
       $("#myChar").html("");
-      $("#oppChars").html("");
+      $("#oppChar").html("");
       $("#result").html("");
       $("#start-screen").css("visibility","visible");
       addChars("choose-character", $("#character-row"));

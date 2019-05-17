@@ -361,6 +361,8 @@ h3.threeD {
   #result {
     margin-top: 1.5vh;
     font-size: 3vh;
+    color: gold;
+    font-family: 'star_jediregular';
   }
   
   /** Shine Effects **/
