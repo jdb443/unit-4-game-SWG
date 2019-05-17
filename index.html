@@ -7,59 +7,77 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		
 
     <title>Jonathan Behar - Star Wars RPG</title>
 </head>
-<body>
-	<div class="container">
-		<div class="row">
-			<header>
-				<h1>Star Wars RPG!</h1>
-			</header>
+<body id="background">
+	<button id="restart" class="btn btn-default">Restart</button>
+	<button id="volumeButton" class="fas fa-volume-off"></button>
+	<div id="start-screen">
+	  <h1> Star Wars RPG </h1>
+	  <h3> Choose your character </h3>
+	   <div class="container">
+		<div id="character-row" class="row">
 		</div>
-		
-		<div class="row">
-			<div class="col-md-6">		
-				<!-- character starting area -->
-				<div id="cast"></div>
-
-				<!-- player area -->
-				<h2 class="display">Your Character</h2>
-				<div id="selectCharacter"></div>
-
-				<!-- defender area -->
-				<h2 class="display">Defender</h2>
-				<div id="defender"></div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- available opponents -->
-				<h2 class="display">Enemies Available To Attack</h2>
-				<div id="availableVillians"></div>
-
-				<!-- fight section -->
-				<h2 class="display">Fight Section</h2>
-				<!-- attack button -->
-				<button type="button" class="btn btn-danger raised display" id="attack">Attack</button>
-
-				<!-- game text -->
-				<p id="textDisplayed"></p>
-			</div>
+	  </div>
+	</div>
+	<div id="game screen">
+	  <div class="container">
+		<div class = "row">
+		  <div class = "col-xs-3 col-xs-offset-1"></div>
+		  <div id = "opponents" class = "col-xs-8 row"></div>
 		</div>
+		<div class = "row">
+
+		  <div id = "fight-stage" class = "col-xs-10">
+			<div class = "row">
+			  <div class = "col-xs-5">
+				<div class="progress">
+				  <span id="myHealth"></span>
+				  <div id="myHP" class="progress-bar bg-success progress-bar-striped active" role="progressbar" style="width:200px">
+				  </div>
+				</div>
+			  </div>
+			  <div class = "col-xs-5 col-xs-offset-2">
+				<div class="progress">
+				  <span id="opponentHealth"></span>
+				  <div id="opponentHP" class="progress-bar bg-danger progress-bar-striped active" role="progressbar" style="width:200px">
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div id = "fight-area" class = "row">
+			  <div id="myChar" class = "col-xs-4 col-xs-offset-1"></div>
+			  <div id="oppChar" class = "col-xs-4 col-xs-offset-2"></div>
+			</div>
+		  </div>
+		</div>
+		<div class = "col-xs-2">
+				<button id="action" class="btn btn-warning">Attack</button>
+		  </div>
+		<div class = "row">
+		  <div class = "col-xs-6 col-xs-offset-3">
+		  <p id = "result"></p>
+		  </div>
+		</div>
+	  </div>
 	</div>
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <!-- JavaScript Game -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+	<!-- JavaScript Game -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+    
 </body>
 </html>

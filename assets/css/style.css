@@ -58,6 +58,51 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+#background {
+    background-image: url("../images/DeathStar.jpg");
+    background-color: black; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100%;
+}
+
 /* body {
     background-image: url("../images/DeathStar.jpg");
     background-repeat: no-repeat;
@@ -66,7 +111,7 @@
     background-color: black;
 } */
 
-.characterButton {
+/* .characterButton {
     border-style: solid;
     border-width: 1px;
     border-color: green;
@@ -92,4 +137,216 @@
     border-style: solid;
     border-width: 1px;
     border-color: black;
+} */
+
+/* .thumbnail {
+    position: relative;
+    margin:15px;
+    }
+.characters {
+    width:150px;
+    border: 2px solid green;
 }
+.caption{
+    font-family: 'star_jediregular';
+
+    text-align:center;
+    border: 2px solid green;
+    background: black;
+    color:gold;
+}
+.caption {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+}
+.text {
+    color:#ffffff;
+    padding:20px;
+}
+#attack {
+    max-width:500px;
+} */
+
+* {
+    box-sizing: border-box;
+    overflow: none;
+  }
+  
+  body {
+    overflow:hidden;
+  }
+  
+  #restart {
+    position: fixed;
+    top:2%;
+    right:2%;
+    font-size: 3.5vh;
+    z-index: 1000;
+    background-color: gold;
+  }
+  
+  #volumeButton {
+    position: fixed;
+    top:2%;
+    left:2%;
+    font-size: 5vh;
+    z-index: 1000;
+    background-color: gold;
+    border-radius: 5px;
+  }
+  
+  h1 {
+    font-family: Monofett;
+    font-size:10vh;
+  }
+  
+  h2 {
+    margin-top:10vh;
+    font-size: 4vh;
+    font-family: 'star_jediregular';
+
+  } 
+  
+  #start-screen {
+    text-align: center;
+    position:fixed;
+    width:100%;
+    height:100vh;
+    z-index:100;
+    background-color: white;
+  }
+  
+  #start-screen p, #opponents p {
+    margin: 0;
+    padding: 0;
+    background-color: gold;
+  }
+  
+  #start-screen p {
+    font-size: 2.6vh;
+    font-weight: bold;
+  }
+  
+  #opponents p {
+    font-size:1.5vh;
+  }
+  
+  #opponents {
+    height: 34vh;
+  }
+  
+  #start-screen img {
+    width:200px;
+    height: 100px;
+  }
+  
+  #opponents img {
+    width: 200px;
+    height: 100px;
+  }
+  
+  #action {
+    float:right;
+    margin-top:5vh;
+  }
+  
+  #fight-stage {
+    background-image: url("../images/star-wars-iceland.jpg");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px 5px #888888;
+  }
+  
+  #myChar img, #oppChar img{
+    width:200px;
+
+  }
+  
+  #myHealth, #opponentHealth{
+    font-size: 16px;
+    font-weight: bold; 
+    color:black;
+    position: absolute;
+  }
+  
+  #oppChar {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+  
+  #result {
+    margin-top: 1.5vh;
+    font-size: 3vh;
+  }
+  
+  /** Shine Effects **/
+  /**
+   * Icon
+   */
+  
+  .icon {
+    border:3px solid black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    
+    margin: 25px 0 25px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-family: sans-serif;
+    box-shadow: 10px 10px 5px #888888;
+  }
+  
+  .icon:nth-child(1) { background: cornflowerblue; }
+  .icon:nth-child(2) { background: salmon; }
+  .icon:nth-child(3) { background: gray; }
+  
+  /**
+   * The "shine" element
+   */
+  
+  .icon:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+  
+  /* Hover state - trigger effect */
+  
+  .icon:hover:after {
+    opacity: 1;
+    top: -40%;
+    left: -40%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  
+  /* Active state */
+  
+  .icon:active:after {
+    opacity: 0;
+  }
