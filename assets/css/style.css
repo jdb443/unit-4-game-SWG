@@ -200,12 +200,12 @@
   
 h1 {
   font-family: 'star_jediregular';
-  font-size: 8vw;
+  font-size: 6vw;
   color: #ffffff;
   margin-top: 5%;
 }
 h1.threeD {
-	font-size: 8vw;
+	font-size: 6vw;
 	font-weight: normal;
 	text-align: center;
 	margin: 0;
@@ -359,11 +359,12 @@ h3.threeD {
     background-repeat: no-repeat;
     box-shadow: 10px 10px 5px #888888;
     width: 100vw;
+    height: 40vh;
   }
   
   #myChar img, #oppChar img{
     width: 200px;
-    height: 400px;
+    height: 300px;
 
   }
   
